@@ -35,6 +35,10 @@ a {
   text-decoration: none;
 }
 
+.figure {
+  margin: 0;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -387,6 +391,17 @@ body.page-cats .site-header {
   margin: 0;
 }
 
+.image-fullwidth {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-fullwidth img {
+  width: 100%;
+  height: auto;
+}
+
 /* Article images */
 .article-image {
   margin: 40px auto;
@@ -406,6 +421,18 @@ body.page-cats .site-header {
 .article-image+.article-image-double,
 .article-image-double+.article-image {
   margin-top: -34px;
+}
+
+.article-image:has(+ .image-fullwidth) {
+  margin-bottom: 6px;
+}
+
+.article-image + .image-fullwidth {
+  margin-top: 6px;
+}
+
+.image-fullwidth + .article-image {
+  margin-top: 6px;
 }
 
 .image-caption {
